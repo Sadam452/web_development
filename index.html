@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restaurants & Hotels</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+.topnav{
+overflow:hidden;
+position:relative;
+background-color:#AB1;
+border-radius:15px;
+}
+.topnav #innav{
+display:none;}
+.topnav a{
+color:white;
+padding:14px 16px;
+text-decoration:none;
+font-size:16px;
+display:block;
+}
+.topnav a.icon{
+background:#AB3;
+display:block;
+position:absolute;
+right:0;
+top:0;
+}
+.topnav a:hover{
+background-color:lightgray;
+color:black;
+}
+.active{
+background-color:pink;
+color:white;
+}
+body{
+background-color: lime;}
+input{
+border:1px solid black;
+border-radius:10px;
+font-size:19px;
+padding:4px;
+text-align:center;
+font-weight:bold;}
+#b1{
+border:1px solid black;
+border-radius:8px;
+background-color:#CE0;
+font-weight:bold;
+font-size:19px;
+padding:4px;
+box-shadow:4px 4px 5px black;}
+#d1{
+margin-top:230px;
+text-align:center;}
+#tid{
+float:left;
+width:33%;
+text-align:center;
+font-weight:bold;
+color:khaki;
+height:170px;
+margin-top:30px;
+background-image:url("https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+border-radius:20px;}
+#har{
+float:left;
+width:33%;
+height:170px;
+text-align:center;
+font-weight:bold;
+color:khaki;
+margin-top:30px;
+background-image:url("https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+border-radius:20px;}
+#pae{
+float:left;
+width:33%;
+height:170px;
+text-align:center;
+font-weight:bold;
+color:red;
+margin-top:30px;
+background-image:url("https://images.pexels.com/photos/374897/pexels-photo-374897.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+border-radius:20px;
+}
+#d3{
+float:left;
+width:25%;
+height:170px;
+text-align:center;
+font-weight:bold;
+color:white;
+margin-left:20%;
+margin-top:30px;
+background-image:url("https://images.pexels.com/photos/1707917/pexels-photo-1707917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+border-radius:20px;
+}
+#d2{
+text-align:center;
+margin-top:240px;}
+#b2{
+background-color:#d1A;
+padding:4px;
+font-weight:bold;
+border-radius:10px;
+box-shadow:5px 5px 5px black;
+}
+.fa-search{
+font-size:25px;
+}
+#social{
+text-align:center;}
+.fa-whatsapp,.fa-twitter{
+text-decoration:none;
+margin-top:20px;
+font-size:30px;}
+footer{
+background-color:lightgray;
+text-align:center;
+border-radius:10px;
+}
+.loader {
+float:left;
+margin-top:40px;
+margin-left:150px;
+border:15px solid yellow;
+border-radius:50%;
+border-top:15px solid magenta;
+border-bottom:15px solid brown;
+border-right:15px solid indigo;
+width:70px;
+height:70px;
+animation:spin 1s linear infinite;
+}
+@keyframes spin {
+0% { transform:rotate(0deg); }
+100% { transform:rotate(360deg); }
+}
+</style>
+<script>
+function myfunc(){
+var x=document.getElementById('innav');
+if(x.style.display==="block"){
+x.style.display="none";}
+else{
+x.style.display="block";}
+}
+</script>
+</head>
+<body onload="f()">
+<div class="topnav">
+<a href="#sadam" class="active"> HOME </a>
+<div id="innav">
+<a href="homepage.html"> Home Page</a>
+<a href="newOrd.html"> Place Order</a>
+<a href="menu2.html"> Explore More Items</a>
+<a href="states.html"> Select State</a>
+<a href="gps.html"> Search Nearby</a>
+<a href="news.html"> Latest News</a>
+<a href="sadam.html"> View Developer</a>
+</div>
+<a href="javascript:void(0);" class="icon" onclick="myfunc()"><i class="fa fa-bars"></i></a>
+</div>
+<div id="tid">
+<p> Tourism Infrastructure development</p>
+<a href="https://jktourism.jk.gov.in"><i class="fa fa-search"></i></a>
+</div>
+<div id="har">
+<p>Hotels & Restaurants</p>
+<a href="https://restaurants.kfc.co.in"><i class="fa fa-search"></i></a>
+</div>
+<div id="pae">
+<p>Publicity & Events</p>
+<a href="https://tourism.gov.in/publicity"><i class="fa fa-search"></i></a>
+</div>
+<div id="d1">
+<p style="text-align:center; text-shadow: 3px 3px 3px tomato,3px 4px 4px red, 3px 5px 3px lime;"><i>Over 100,000 bookings already done. Search your favourite tourist place..</i></p>
+<form action="https://google.com/search" target="_blank" type="GET">
+<input  id="sad" type="search" placeholder="Search something" name="q">
+<input class="c1" id="b1" type="submit" value="Search">
+</form>
+<script>
+var form=document.querySelector("form");
+form.addEventListener("submit",function(e){
+e.preventDefault();
+var search=form.querySelector("input[type=search]");
+search.value=search.value;
+form.submit();
+});
+</script>
+</div>
+<div class="loader"></div>
+<div id="d3">
+<p> Check Our Menu</p>
+<a href="https://online.kfc.co.in/menu?utm_source=Restaurant-locator&utm_medium=Main_Banner"><i class="fa fa-search"></i></a>
+</div>
+<div class="loader"></div>
+<div id="d2">
+<button id="b2" href="#33"> Related Links </button>
+<button id="b2" href="#33"> What's New </button>
+<button id="b2" href="#33"> Annual Report </button>
+<button id="b2" href="#33"> Monthly Achievements </button>
+<button id="b2" href="#33"> Newsletters </button>
+<button id="b2" href="#33"> Events </button>
+</div>
+<div id="social">
+<span><i>Follow us On </i></span>
+<a href="https://api.whatsapp.com/send?phone=917889422245" class="fa fa-whatsapp"></a>
+<a href="https://twitter.com/myselfsadam_?s=09" class="fa fa-twitter"></a>
+</div>
+</body>
+<footer><tt> Designed by Sadam with &#128151;. &copy;<span id="copyright">2020-</span><script>function f(){
+var x=new Date();
+var years=x.getFullYear();
+document.getElementById('copyright').innerHTML+=years;}</script>. @Sadam_Dev_Corp </tt>
+</footer>
+
+</html>

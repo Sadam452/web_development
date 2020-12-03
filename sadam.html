@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="author" content="SADAM HUSSAIN">
+<meta http-equiv="refresh" content="120">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Sadam's Bio</title>
+<style>
+  *{
+box-sizing:border-box;}
+header{
+background-color:khaki;
+padding:30px;
+text-align:center;
+font-size:25px;
+color:tomato;}
+nav{
+float:left;
+width:40%;
+height:450px;
+background-color:#ccc;
+padding:20px;}
+article{
+float:left;
+padding:20px;
+width:60%;
+background-color:#f1f1f1;
+height:450px;}
+section:after{
+content:"";
+display:table;
+clear:both;
+}
+footer{
+background-color:#777;
+text-align:center;
+padding:20px;
+color:white;}
+@media(max-width:600px){
+nav,article{
+width:100%;
+height:auto;
+}
+}
+#new {
+  color:red;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker{
+50%{
+opacity:0;
+}
+}
+#tim {
+  background-color: green;
+  color:pink;
+  border-radius:5px;
+  font-weight:bold;
+  padding:2px;
+}
+marquee {
+  width:95%;
+  background-color: silver;
+}
+#s2{
+color:tomato;
+text-align:center;}
+img{
+display:block;
+margin-left:auto;
+margin-right:auto;
+border:2px solid khaki;
+width:270px;
+height:270px;
+border-radius:22px;}
+.fa {
+  padding: 10px;
+  font-size: 25px;
+  width: 40px;
+  text-align:center;
+  text-decoration: none;
+  margin:5px auto 1px auto;
+  }
+	 .fa:hover{
+	 opacity:0.7;
+	 }
+	 .fa-twitter{
+	 background: #55ACEE;
+  color: white;
+	 }
+	 .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+.fa-whatsapp {
+  background:green;
+  color: white;
+}
+</style>
+<script type="text/javascript">
+  var images=[
+"sadam1.jpg",
+"sadam2.jpg",
+"sadam3.jpg",
+"sadam4.jpg",
+"sadam5.jpg",
+];
+var i=0;
+function slide(){
+document.getElementById("images").src=images[i];
+if(i<(images.length-1))
+i++;
+else i=0;}
+setInterval(slide,2000);
+function func1()
+{
+var tmp=new Date();
+var hours=tmp.getHours();
+var minutes=tmp.getMinutes();
+var seconds=tmp.getSeconds();
+minutes=func2(minutes);
+seconds=func2(seconds);
+document.getElementById('tim').innerHTML=hours+":"+minutes+":"+seconds;
+setTimeout(func1,500);
+}
+function func2(m)
+{
+if(m<10){m="0"+m;}
+return m;
+}
+</script>
+</head>
+<body onload="func1()">
+<span id="tim"></span>
+<marquee behavior="scroll" scrollamount="5"direction="left"><span id="new"><sup>NEW</sup></span><span>Welcome dear visitor, explore all you want!</span></marquee>
+<p><img id="images" width="300px" height="300px"></p>
+<header>
+<p>About Sadam</p>
+</header>
+<section>
+<nav>
+<ul type="square">
+<table>
+<tr>
+<th><li>Name: </li></th> <td> Sadam Hussain</td>
+</tr><tr>
+<th> <li>Education:</li></th> <td> B TECH CSE</td>
+</tr><tr>
+<th><li>University:</li> </th> <td> Islamic University Of Science & Techonology, Awantipora.</td>
+</tr>
+<tr>
+<th><li>Address:</li></th> <td> lolab, kupwara, j&k</td>
+</tr>
+<tr>
+<th><li>Contact: </li></th> <td> +91-7889422245</td>
+</tr>
+<tr><th> <li>Email Id:</li></th><td> <a href="mailto:hu55ainsadammmm@gmail.com"/> Click To Send Mail</a></td></li>
+</table>
+</ul>
+</nav>
+<article>
+<pre><u>THE GREATEST
+PLEASURE IN LIFE
+IS DOING
+WHAT PEOPLE
+SAY YOU
+CANNOT DO.</u></pre></p>
+<pre><u>I WILL LOVE
+THE LIGHT FOR
+IT SHOWS ME THE WAY,
+YET I WILL 
+ENDURE THE DARKNESS
+BECAUSE IT
+SHOWS ME THE 
+<mark>STARS</mark></u></pre>
+</article>
+</section>
+<footer><b><ul><li>Compromise for your dream, but never compromise on your dream.</li><li>Never let yourself be defeated, fought well.</li></ul>
+<a href="https://twitter.com/myselfsadam_?s=09" class="fa fa-twitter"></a>
+<a href="https://www.youtube.com/channel/UClC95wyDHN43yj7hMWoq8lw" class="fa fa-youtube"></a>
+<a href="https://login.yahoo.com/?.src=fpctx&.intl=in&.lang=en-IN&.done=https://in.yahoo.com" class="fa fa-yahoo"></a>
+<a href="https://api.whatsapp.com/send?phone=917889422245" class="fa fa-whatsapp"></a></footer>
+</body>
+</html>
