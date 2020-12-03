@@ -119,6 +119,7 @@ var minutes=tmp.getMinutes();
 var seconds=tmp.getSeconds();
 minutes=func2(minutes);
 seconds=func2(seconds);
+hours=hours%12;
 document.getElementById('tim').innerHTML=hours+":"+minutes+":"+seconds;
 setTimeout(func1,500);
 }
