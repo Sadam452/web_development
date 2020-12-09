@@ -151,6 +151,14 @@ width:98%;
 margin-left:0px;
 }
 }
+#loc{
+margin-left:48%;
+font-weight:bold;
+background-color:black;
+color:white;
+border:solid red 4px;
+border-radius:6px;
+}
 </style>
 <script>
 function myfunc(){
@@ -159,6 +167,18 @@ if(x.style.display==="block"){
 x.style.display="none";}
 else{
 x.style.display="block";}
+}
+function GetLocation(){
+if(navigator.geolocation)
+{
+navigator.geolocation.getCurrentLocation(showPosition);
+}
+else
+alert("SOMETHING WENT WRONG.");
+}
+function showPosition(position)
+{
+alert("YOUR PRESENT COORDINATES ARE <br>LATITUDE= "+position.coords.latitude+" LONGITUDE= "+position.coords.longitude;
 }
 </script>
 </head>
@@ -173,6 +193,7 @@ x.style.display="block";}
 <a href="#"> Search Nearby</a>
 <a href="sadam.html"> Latest News</a>
 <a href="sadam.html"> View Developer</a>
+<button id="loc" onclick="GetLocation()">Show My Location</button>
 </div>
 <a href="javascript:void(0);" class="icon" onclick="myfunc()"><i class="fa fa-bars"></i></a>
 </div>
