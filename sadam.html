@@ -114,6 +114,16 @@ font-family: 'Brush Script MT',cursive;
 		color: white;
 		font-weight: bold;
 	}
+	#newsletter_inner1 {
+		float: left;
+		width: 40%;
+	}
+	#newsletter_inner2 {
+		float: left;
+		width:60%;
+	}
+	input.submit {
+		color: blue;}
 </style>
 <script>
   var images=["sadam1.jpg","sadam2.jpg","sadam3.jpg","sadam4.jpg","sadam5.jpg"];
@@ -193,11 +203,12 @@ SHOWS ME THE
 <a href="https://www.youtube.com/channel/UClC95wyDHN43yj7hMWoq8lw" class="fa fa-youtube"></a>
 <a href="https://login.yahoo.com/?.src=fpctx&.intl=in&.lang=en-IN&.done=https://in.yahoo.com" class="fa fa-yahoo"></a>
 <a href="https://api.whatsapp.com/send?phone=917889422245" class="fa fa-whatsapp"></a></footer>
-	<div id="newsletter"><b>Get new content delivered directly to your inbox.</b>
-	<form>
+	<div id="newsletter">
+		<div id="newsletter_inner1"><b>Get new content delivered directly to your inbox.</b></div>
+	       <div id="newsletter_inner2"> <form>
 		<input type="email" name="email" placeholder="Email Address" required>
-		<input type="submit" value="Subscribe">
-		</form>
+		<input type="submit" name="submit" value="Subscribe">
+		       </form></div>
 	</div>
 </body>
 </html>
