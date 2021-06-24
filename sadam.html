@@ -148,7 +148,15 @@ font-family: 'Brush Script MT',cursive;
 		font-family: 'Sans-serif';
 		outline: none;
 	}
-		
+#static {
+background-color: tan;
+color: white;
+font-weight: bold;
+height:10px;
+position: static;
+box-shadow: 1px 2px 3px black;
+border: solid 1px white;
+}		
 </style>
 <script>
   var images=["sadam1.jpg","sadam2.jpg","sadam3.jpg","sadam4.jpg","sadam5.jpg"];
@@ -179,7 +187,9 @@ return m;
 </script>
 </head>
 <body onload="func1()">
-<span id="tim"></span>
+<div id="static">
+<span>You Are Here:: Home</span>
+<span id="tim"></span></div>
 <marquee behavior="scroll" scrollamount="5"direction="left"><span id="new"><sup>NEW</sup></span><span>Welcome dear visitor, explore all you want!</span></marquee>
 <p><img id="images" width="300px" height="300px"alt="Image is missing!"></p>
 <header>
