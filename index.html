@@ -187,6 +187,10 @@ function showPosition(position)
 {
 alert("YOUR PRESENT COORDINATES ARE <br>LATITUDE= "+position.coords.latitude+" LONGITUDE= "+position.coords.longitude);
 }
+function browser(){
+document.getElementById("demo").innerHTML =
+navigator.userAgent;
+}
 </script>
 </head>
 <body onload="f()">
@@ -198,6 +202,8 @@ alert("YOUR PRESENT COORDINATES ARE <br>LATITUDE= "+position.coords.latitude+" L
 <a href="sadam.html"> Explore More Items</a>
 <a href="#"> Select State</a>
 <a href="#"> Search Nearby</a>
+<button onclick="browser();">Know My Device Name</button>
+<span id="demo"></span>
 <a href="sadam.html"> Latest News</a>
 <a href="sadam.html"> View Developer</a>
 <button id="loc" onclick="GetLocation()">Show My Location</button>
